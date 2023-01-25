@@ -1,0 +1,162 @@
+/* import */
+@import url("https://use.typekit.net/ayr1spo.css");
+
+/* init */
+body {
+  font-family: "serenity", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Header */
+
+.header-section .navbar {
+  padding: 30px;
+  position: absolute;
+  /* background: red; */
+}
+
+.header-section .navbar-right {
+  display: none;
+}
+/* menu burger */
+
+.burger-menu {
+  padding: 12px 10px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: white;
+}
+
+.burger-top,
+.burger-mid,
+.burger-bot {
+  height: 2px;
+  width: 30px;
+  background: black;
+}
+
+/* hero section */
+.hero-section {
+  background: url(../img/skip_the_use_hero-banner.png),
+    linear-gradient(#fff, #9b82e1);
+  background-position: center bottom;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  height: 630px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  margin-top: 190px;
+}
+
+/* bio */
+
+.new-section {
+  background: linear-gradient(#9b82e1, #064f7a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px 150px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.separator {
+  height: 1px;
+  background: black;
+  width: 82px;
+}
+
+.new-section p {
+  font-size: 18px;
+}
+
+.new-album {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+.new-album-cover {
+  width: 150px;
+  height: auto;
+}
+
+.new-album-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-album-left p {
+  align-self: flex-start;
+}
+.new-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.btn {
+  background: #ed0002;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 35px;
+  border-radius: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.bio-section {
+  background: linear-gradient(#064f7a, #030f16);
+}
+
+.bio-img {
+  width: 100%;
+  height: auto;
+  padding: 0px 20px;
+}
+
+.bio-section p {
+  color: white;
+  font-size: 16px;
+  padding: 0px 40px;
+  margin-top: 40px;
+}
+
+.bio-list {
+  color: rgb(204, 204, 204);
+  list-style: none;
+  font-weight: 500;
+  padding: 40px;
+}
+
+.bio-video {
+  width: 100%;
+}
+
+.barre {
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #82a0b8;
+  width: 100%;
+}
