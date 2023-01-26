@@ -19,3 +19,19 @@ function Toggle_Burger_Menu() {
 }
 
 Toggle_Burger_Menu();
+
+function Aimate_Header() {
+  let header = document.querySelector(".header-section .navbar");
+  let ScrollPosition = 0;
+
+  document.addEventListener("scroll", () => {
+    ScrollPosition = window.scrollY;
+    if (ScrollPosition > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+}
+
+Aimate_Header();
