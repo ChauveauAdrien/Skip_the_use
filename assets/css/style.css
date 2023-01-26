@@ -12,7 +12,7 @@ body {
 
 .header-section .navbar {
   padding: 30px;
-  position: fixed;
+  position: absolute;
   z-index: 8;
 }
 
