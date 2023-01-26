@@ -13,18 +13,32 @@ body {
 .header-section .navbar {
   padding: 30px;
   position: absolute;
-  /* background: red; */
+  background: linear-gradient(white, rgba(255, 255, 255, 0));
 }
 
+.navbar {
+  width: 100%;
+}
 .header-section .navbar-right {
-  display: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+  margin-right: 100px;
+}
+
+.navbar-right a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
 }
 /* menu burger */
 
 .burger-menu {
   padding: 12px 10px;
   border: 2px solid black;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -34,6 +48,7 @@ body {
   bottom: 30px;
   right: 30px;
   background: white;
+  z-index: 10;
 }
 
 .burger-top,
@@ -49,7 +64,7 @@ body {
   background: url(../img/skip_the_use_hero-banner.png),
     linear-gradient(#fff, #9b82e1);
   background-position: center bottom;
-  background-size: 150%;
+  background-size: 600px, 100%;
   background-repeat: no-repeat;
   height: 630px;
   display: flex;
@@ -126,12 +141,18 @@ h1 {
 
 .bio-section {
   background: linear-gradient(#064f7a, #030f16);
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bio-img {
   width: 100%;
   height: auto;
   padding: 0px 20px;
+  max-width: 1200px;
 }
 
 .bio-section p {
@@ -139,17 +160,22 @@ h1 {
   font-size: 16px;
   padding: 0px 40px;
   margin-top: 40px;
+  max-width: 1000px;
 }
 
 .bio-list {
   color: rgb(204, 204, 204);
   list-style: none;
   font-weight: 500;
-  padding: 40px;
+  padding: 20px 40px;
+  align-self: flex-start;
 }
 
-.bio-video {
+.bio-video-wrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .barre {
@@ -159,4 +185,223 @@ h1 {
   margin-bottom: 10px;
   background: #82a0b8;
   width: 100%;
+  /* position: absolute; */
+  /* z-index: 0;
+  margin-top: 20px; */
+}
+
+.bio-video {
+  width: 80%;
+}
+
+/* album-wrapper */
+
+.albums-section {
+  padding: 40px 30px 100px;
+}
+
+.albums-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.album {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.album-cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.albums-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.albums-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.carroussel-wrapper {
+  background: linear-gradient(#9b82e1, #0b517d);
+  padding: 90px 0px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carroussel-wrapper h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.clip {
+  width: 100%;
+}
+
+.carousel-indicators {
+  transform: translateY(50px);
+}
+.carousel {
+  margin-bottom: 50px !important;
+}
+
+.footer-section {
+  background: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* background: red; */
+}
+
+.footer-right {
+  align-self: center;
+}
+
+.footer-right a {
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-bot {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-bot a {
+  color: black;
+}
+@media (max-width: 1000px) {
+  .header-section .navbar-right {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 800px) {
+  .bio-section p {
+    font-size: 20px;
+  }
+  .bio-list {
+    font-size: 20px;
+    align-self: flex-start;
+  }
+
+  .new-album-cover {
+    width: 300px;
+    height: auto;
+  }
+  .new-album {
+    flex-direction: column;
+    align-items: center;
+  }
+  .new-album h3 {
+    margin-bottom: 30px;
+  }
+  .btn {
+    padding: 10px 50px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .albums-section {
+    padding: 30px 200px 50px;
+  }
+
+  .header-section .navbar {
+    position: fixed;
+  }
+
+  .album-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .album-cover {
+    width: 170px;
+    height: auto;
+  }
+
+  .album-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .album-info h3 {
+    margin-bottom: 0px;
+  }
+
+  .hero-logo {
+    display: none;
+  }
+
+  .hero-section {
+    background-size: 900px, 100%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .album-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .album-cover {
+    width: 350px;
+    height: auto;
+  }
+
+  .hero-logo {
+    display: none;
+  }
+
+  .hero-section {
+    background-size: 1050px, 100%;
+  }
 }
