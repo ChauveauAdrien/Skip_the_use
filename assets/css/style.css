@@ -51,12 +51,31 @@ body {
   z-index: 10;
 }
 
+/* default */
 .burger-top,
 .burger-mid,
 .burger-bot {
   height: 2px;
   width: 30px;
   background: black;
+}
+
+/* active */
+
+.active {
+  gap: 0px;
+  padding: 20px 10px;
+}
+.active .burger-mid {
+  display: none;
+}
+
+.active .burger-top {
+  transform: rotate(45deg);
+}
+
+.active .burger-bot {
+  transform: rotate(-45deg);
 }
 
 /* hero section */
@@ -298,6 +317,33 @@ h1 {
 .footer-bot a {
   color: black;
 }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: white;
+  z-index: 9;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* media queries */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+
 @media (max-width: 1000px) {
   .header-section .navbar-right {
     display: none;
